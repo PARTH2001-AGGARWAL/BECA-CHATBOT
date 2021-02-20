@@ -1,0 +1,646 @@
+from tkinter import *
+def fwindow():
+    text1 = '''Please select your concerned option:
+
+    1. CLASS RELATED ISSUES
+    2. CLUB RELATED ISSUES
+    3. COURSE RELATED ISSUES
+    4. ERP RELATED ISSUES
+    5. EXAMINATION RELATED ISSUES
+    6. MISCELLANEAOUS ISSUES'''
+    Label(root, text=text1,font="Algerian,10").grid()
+    Label(root, text="Enter choice",padx=10,pady=10).grid()
+    var=StringVar(root)
+    var.set(None)
+    but = Radiobutton(root,text="1", value='Choice 1', variable=var).grid()
+    but = Radiobutton(root,text="2",value='Choice 2', variable=var).grid()
+    but = Radiobutton(root,text="3",value='Choice 3', variable=var).grid()
+    but = Radiobutton(root,text="4",value='Choice 4', variable=var).grid()
+    but = Radiobutton(root,text="5",value='Choice 5', variable=var).grid()
+    but = Radiobutton(root,text="6",value='Choice 6', variable=var).grid()
+    Button(root, text='Submit', command=lambda: start(var.get())).grid()
+    
+
+def start(choice): #first window
+    root.withdraw()
+    global ch 
+    ch = Tk()
+    ch.geometry('600x600')
+    ch.title("BECA")
+    if choice=='Choice 1':
+        txt2 = '''1. Class link issues
+2. Recorded lectures
+3. MS teams related issues
+4. Back'''
+        Label(ch, text="Class related issues",bg="black",fg="Orange",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        Label(ch, text=txt2,pady=20,font=("Algerian,10"),padx=20).pack()
+        Label(ch, text="Enter choice").pack()
+        var=StringVar(ch)
+        var.set(None)
+        Radiobutton(ch,text="1", value='Choice 1', variable=var).pack()
+        Radiobutton(ch,text="2", value='Choice 2', variable=var).pack()
+        Radiobutton(ch,text="3", value='Choice 3', variable=var).pack()
+        Radiobutton(ch,text="Back", value='Choice 4', variable=var).pack()
+        Button(ch,text='Submit', command=lambda: cli(var.get())).pack()
+
+    elif choice=='Choice 2':
+        txt2='''1. NOMADS
+2. ROBOTICS
+3. SILHOUETTE
+4. VIRTUOSO
+5. ISAAC
+6. SPIC MACAY
+7. ALEXIS
+8. BU PULSE
+9. ASTRONOMY
+10. SPARK
+11. CEREBRUM
+12. BACK'''
+        Label(ch, text="Club related issues",bg="black",fg="Orange",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        l3 = Label(ch, text=txt2).pack()
+        l4 = Label(ch, text="Enter choice").pack()
+        var=StringVar(ch)
+        var.set(None)
+        Radiobutton(ch,text="1", value='Choice 1', variable=var).pack()
+        Radiobutton(ch,text="2", value='Choice 2', variable=var).pack()
+        Radiobutton(ch,text="3", value='Choice 3', variable=var).pack()
+        Radiobutton(ch,text="4", value='Choice 4', variable=var).pack()
+        Radiobutton(ch,text="5", value='Choice 5', variable=var).pack()
+        Radiobutton(ch,text="6", value='Choice 6', variable=var).pack()
+        Radiobutton(ch,text="7", value='Choice 7', variable=var).pack()
+        Radiobutton(ch,text="8", value='Choice 8', variable=var).pack()
+        Radiobutton(ch,text="9", value='Choice 9', variable=var).pack()
+        Radiobutton(ch,text="10", value='Choice 10', variable=var).pack()
+        Radiobutton(ch,text="11", value='Choice 11', variable=var).pack()
+        Radiobutton(ch,text="Back", value='Choice 12', variable=var).pack()
+        Button(ch,text='Submit', command=lambda: cri(var.get())).pack()
+    
+    elif choice=='Choice 3':
+        txt2 = '''1. EECE105L
+2. ECSE105L
+3. EPHY105L
+4. EHSS103L 
+5. EMAT101L
+6. BACK'''
+    
+        Label(ch,text="Class related issues",bg="black",fg="Orange",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        Label(ch, text=txt2).pack()
+        Label(ch, text="Enter choice").pack()
+        var=StringVar(ch)
+        var.set(None)
+        Radiobutton(ch,text="1", value='Choice 1', variable=var).pack()
+        Radiobutton(ch,text="2", value='Choice 2', variable=var).pack()
+        Radiobutton(ch,text="3", value='Choice 3', variable=var).pack()
+        Radiobutton(ch,text="4", value='Choice 4', variable=var).pack()
+        Radiobutton(ch,text="5", value='Choice 5', variable=var).pack()
+        Radiobutton(ch,text="Back", value='Choice 6', variable=var).pack()
+        Button(ch, text='Submit',command=lambda: courserl()).pack()
+    
+    elif choice=='Choice 4': #ERP related issues
+        txt2 = '''1.TIME TABLE
+2. RESULTS
+3. BACK'''
+        Label(ch,text = 'Erp related issues',bg="black",fg="Orange",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        Label(ch, text=txt2).pack()
+        Label(ch, text="Enter choice").pack()
+        var=StringVar(ch)
+        var.set(None)
+        Radiobutton(ch,text="1", value='Choice 1', variable=var).pack()
+        Radiobutton(ch,text="2", value='Choice 2', variable=var).pack()
+        Radiobutton(ch,text="3", value='Choice 3', variable=var).pack()
+        Button(ch, text='Submit',command=lambda: erprli()).pack()
+    
+    elif choice=='Choice 5': #EXAMINATIONS RELATED ISSUES
+        txt2 = '''1. EMAT101L
+2. EHSS103L
+3. ECSE105L
+4. EPHY105L
+5. EECE105L
+6. BACK'''
+        Label(ch, text="Examinations related issues",bg="black",fg="Orange",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        Label(ch, text=txt2).pack()
+        Label(ch, text="Enter choice").pack()
+        var=StringVar(ch)
+        var.set(None)
+        Radiobutton(ch,text="1", value='1', variable=var).pack()
+        Radiobutton(ch,text="2", value='2', variable=var).pack()
+        Radiobutton(ch,text="3", value='3', variable=var).pack()
+        Radiobutton(ch,text="4", value='4', variable=var).pack()
+        Radiobutton(ch,text="5", value='5', variable=var).pack()
+        Radiobutton(ch,text="Back", value='6', variable=var).pack()
+        Button(ch, text='Submit',command=lambda: eri(var.get())).pack()
+
+    elif choice=='Choice 6':
+        txt2 = '''1. LMS
+2. CODE ZINGER
+3. TINKERCAD
+4. AMRITA VIRTUAL LAB
+5. BACK'''
+        Label(ch, text="Miscellaneous Issues",bg="black",fg="Orange",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        Label(ch, text=txt2).pack()
+        Label(ch, text="Enter choice").pack()
+        var=StringVar(ch)
+        var.set(None)
+        Radiobutton(ch,text="1", value='1', variable=var).pack()
+        Radiobutton(ch,text="2", value='2', variable=var).pack()
+        Radiobutton(ch,text="3", value='3', variable=var).pack()
+        Radiobutton(ch,text="4", value='4', variable=var).pack()
+        Radiobutton(ch,text="Back", value='5', variable=var).pack()
+        Button(ch, text='Submit',command=lambda: misc(var.get())).pack()
+    ch.mainloop()
+
+
+#1 Class related issues
+def cli(choice1):
+    ch.withdraw()
+    global ch1
+    ch1 = Tk()
+    ch1.geometry('600x600')
+    ch1.title("BECA")
+    if choice1=='Choice 1': #CLASS LINK ISSUE
+        txt2 = '''1. NOT GETTING LINKS
+2. LINK NOT WORKING
+3. CLASSESS NOT SCHEDULED IN CALENDAR
+4. BACK'''
+        Label(ch1, text="Class link issues",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        Label(ch1, text=txt2,pady=20).pack()
+        Label(ch1, text="Enter choice").pack()
+        var=StringVar(ch1)
+        var.set(None)
+        Radiobutton(ch1,text="1", value='Choice 1', variable=var).pack()
+        Radiobutton(ch1,text="2", value='Choice 2', variable=var).pack()
+        Radiobutton(ch1,text="3", value='Choice 3', variable=var).pack()
+        Radiobutton(ch1,text="Back", value='Choice 4', variable=var).pack()
+        Button(ch1, text='Submit',command=lambda: cai(var.get())).pack()
+    elif choice1=='Choice 2': #
+        txt2 = '''1. ECE105L
+2. ECSE105L
+3. EPHY105L
+4. EHSS103L
+5. EMAT101L
+6. BACK'''
+        Label(ch1, text="Recorded lectures",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack() #FOR RECORDED LECTURES
+        Label(ch1, text=txt2,pady=20).pack()
+        Label(ch1, text="Enter choice").pack()
+        var=StringVar(ch1)
+        var.set(None)
+        Radiobutton(ch1,text="1", value='Choice 1', variable=var).pack()
+        Radiobutton(ch1,text="2", value='Choice 2', variable=var).pack()
+        Radiobutton(ch1,text="3", value='Choice 3', variable=var).pack()
+        Radiobutton(ch1,text="4", value='Choice 4', variable=var).pack()
+        Radiobutton(ch1,text="5", value='Choice 5', variable=var).pack()
+        Radiobutton(ch1,text="Back", value='Choice 6', variable=var).pack()
+        Button(ch1, text='Submit',command=lambda: not_getting_links(var.get())).pack()
+
+    elif choice1=='Choice 3':
+        txt2 = '''1. CAN NOT LOGIN WITH NENNEYY I-D?
+2. NOT PART OF A TEAM
+3. SHARED FILE/RECORDING NOT ACCESSIBLE
+4. BACK'''
+        Label(ch1, text="M S Teams related issues",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack() #MS TEAMS RELATED ISSUE
+        Label(ch1, text=txt2,pady=20).pack()
+        Label(ch1, text="Enter choice").pack()
+        var=StringVar(ch1)
+        var.set(None)
+        Radiobutton(ch1,text="1", value='Choice 1', variable=var).pack()
+        Radiobutton(ch1,text="2", value='Choice 2', variable=var).pack()
+        Radiobutton(ch1,text="3", value='Choice 3', variable=var).pack()
+        Radiobutton(ch1,text="Back", value='Choice 6', variable=var).pack()
+        Button(ch1, text='Submit',command=lambda: msteams(var.get())).pack()
+
+
+    elif choice1=='Choice 4':
+        pass
+
+def msteams(choice):
+    ch1.withdraw()
+    global ch3
+    ch3 = Tk()
+    ch3.geometry('600x600')
+    ch3.title("BECA")
+    if choice=="Choice 1":
+        Label(ch3, text="Hello",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+    elif choice=="Choice 2":
+        txt2 = '''1. ECE105L
+2. ECSE105L
+3. EPHY105L
+4. EHSS103L
+5. EMAT101L
+6. BACK'''
+        Label(ch3, text="Not part of a team",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        Label(ch3, text=txt2,pady=20).pack()
+        Label(ch3, text="Enter choice").pack()
+        var=StringVar(ch3)
+        var.set(None)
+        Radiobutton(ch3,text="1", value='Choice 1', variable=var).pack()
+        Radiobutton(ch3,text="2", value='Choice 2', variable=var).pack()
+        Radiobutton(ch3,text="3", value='Choice 3', variable=var).pack()
+        Radiobutton(ch3,text="4", value='Choice 4', variable=var).pack()
+        Radiobutton(ch3,text="5", value='Choice 5', variable=var).pack()
+        Radiobutton(ch3,text="Back", value='Choice 6', variable=var).pack()
+        Button(ch3, text='Submit',command=lambda: not_getting_links(var.get())).pack()
+    
+    elif choice=="Choice 3":
+        txt2 = '''1. ECE105L
+2. ECSE105L
+3. EPHY105L
+4. EHSS103L
+5. EMAT101L
+6. BACK'''
+        Label(ch3, text="Shared file/location not accessible",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        Label(ch3, text=txt2,pady=20).pack()
+        Label(ch3, text="Enter choice").pack()
+        var=StringVar(ch3)
+        var.set(None)
+        Radiobutton(ch3,text="1", value='Choice 1', variable=var).pack()
+        Radiobutton(ch3,text="2", value='Choice 2', variable=var).pack()
+        Radiobutton(ch3,text="3", value='Choice 3', variable=var).pack()
+        Radiobutton(ch3,text="4", value='Choice 4', variable=var).pack()
+        Radiobutton(ch3,text="5", value='Choice 5', variable=var).pack()
+        Radiobutton(ch3,text="Back", value='Choice 6', variable=var).pack()
+        Button(ch3, text='Submit',command=lambda: not_getting_links(var.get())).pack()
+
+def cai(choice1): #class any issue
+    ch1.withdraw()
+    global ch3
+    ch3 = Tk()
+    ch3.geometry('600x600')
+    ch3.title("BECA")
+    if choice1=='Choice 1':
+        txt2 = '''1. ECE105L
+2. ECSE105L
+3. EPHY105L
+4. EHSS103L
+5. EMAT101L
+6. BACK'''
+        Label(ch3, text="Not getting links",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        Label(ch3, text=txt2,pady=20).pack()
+        Label(ch3, text="Enter choice").pack()
+        var=StringVar(ch3)
+        var.set(None)
+        Radiobutton(ch3,text="1", value='Choice 1', variable=var).pack()
+        Radiobutton(ch3,text="2", value='Choice 2', variable=var).pack()
+        Radiobutton(ch3,text="3", value='Choice 3', variable=var).pack()
+        Radiobutton(ch3,text="4", value='Choice 4', variable=var).pack()
+        Radiobutton(ch3,text="5", value='Choice 5', variable=var).pack()
+        Radiobutton(ch3,text="Back", value='Choice 6', variable=var).pack()
+        Button(ch3, text='Submit',command=lambda: not_getting_links(var.get())).pack()
+
+
+    elif choice1=='Choice 2':
+        txt2 = '''1. ECE105L
+2. ECSE105L
+3. EPHY105L
+4. EHSS103L
+5. EMAT101L
+6. BACK'''
+        Label(ch3, text="Links not working",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        Label(ch3, text=txt2,pady=20).pack()
+        Label(ch3, text="Enter choice").pack()
+        var=StringVar(ch3)
+        var.set(None)
+        Radiobutton(ch3,text="1", value='Choice 1', variable=var).pack()
+        Radiobutton(ch3,text="2", value='Choice 2', variable=var).pack()
+        Radiobutton(ch3,text="3", value='Choice 3', variable=var).pack()
+        Radiobutton(ch3,text="4", value='Choice 4', variable=var).pack()
+        Radiobutton(ch3,text="5", value='Choice 5', variable=var).pack()
+        Radiobutton(ch3,text="Back", value='Choice 6', variable=var).pack()
+        Button(ch3, text='Submit',command=lambda: not_getting_links(var.get())).pack()
+
+    elif choice1=='Choice 3':
+        txt2 = '''1. ECE105L
+2. ECSE105L
+3. EPHY105L
+4. EHSS103L
+5. EMAT101L
+6. BACK'''
+        Label(ch3, text="Classes not scheduled in calendar",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        Label(ch3, text=txt2,pady=20).pack()
+        Label(ch3, text="Enter choice").pack()
+        var=StringVar(ch3)
+        var.set(None)
+        Radiobutton(ch3,text="1", value='Choice 1', variable=var).pack()
+        Radiobutton(ch3,text="2", value='Choice 2', variable=var).pack()
+        Radiobutton(ch3,text="3", value='Choice 3', variable=var).pack()
+        Radiobutton(ch3,text="4", value='Choice 4', variable=var).pack()
+        Radiobutton(ch3,text="5", value='Choice 5', variable=var).pack()
+        Radiobutton(ch3,text="Back", value='Choice 6', variable=var).pack()
+        Button(ch3, text='Submit',command=lambda: not_getting_links(var.get())).pack()
+    elif choice1=='Choice 4':
+        Label(ch3, text="Sorry, Under construction!!").pack()
+
+def not_getting_links(cls): #providing links is classes
+    ch1.withdraw()
+    global ch2
+    ch2 = Tk()
+    ch2.geometry('600x600')
+    ch2.title("BECA")
+    Label(ch2,text="Link for Class",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+    if(cls=="Choice 1"):
+        Label(ch2,text="Electrical").pack()
+    elif(cls=="Choice 2"):
+        Label(ch2,text="Python").pack()
+    elif(cls=="Choice 3"):
+        Label(ch2,text="Physics").pack()
+    elif(cls=="Choice 4"):
+        Label(ch2,text="Life Skills").pack()
+    elif(cls=="Choice 5"):
+        Label(ch2,text="Maths").pack()
+    elif(cls=="choice 6"):
+        Label(ch2,text="Back").pack()
+#2 club related issues
+def cri(choice2): 
+    ch.withdraw()
+    global ch1
+    ch1 = Tk()
+    ch1.geometry('600x600')
+    ch1.title("BECA")
+    if(choice2=="Choice 1"):
+        Label(ch1,text="NOMADS CLUB",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        clubinfo ='''Nomads club as the name suggests is a group of travel enthusiats and adventure sports lovers. 
+The club aims to make students experience the beauty and the thrill that’s hidden in nature. 
+The members participates in adventure activities like river rafting, trekking and camping.'''
+        Label(ch1,text=clubinfo).pack()
+    elif(choice2=="Choice 2"):
+        Label(ch1,text="ROBOTICS CLUB",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        clubinfo ='''The club helps the students to form a brief understanding of various concepts and dynamics of Robotics. 
+Students of the Robotics Club attend workshops, hold competitions and take part 
+in different events to strengthen their technical skills.'''
+        Label(ch1,text=clubinfo).pack()
+    elif(choice2=="Choice 3"):
+        Label(ch1,text="SILHOUETTE CLUB",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        clubinfo ='''Silhouette club is the creative society of the university, which aims to promote the rich and 
+vibrant art by organizing activities like painting, sketching, calligraphy, decoration, craft work, 
+graffiti and contemporary designing. The club hosts various exhibitions, workshops and competitions. 
+It also organizes trips to art museums and encourages students to participate in college fests.'''
+        Label(ch1,text=clubinfo).pack()
+    elif(choice2=="Choice 4"):
+        Label(ch1,text="VIRTUOSO CLUB",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        clubinfo ='''This club is the spice of the University with its fathomless zest and 
+exuberance towards dance, drama and music. The club sponsors the deserving students 
+in big events and organizes activities to unearth the hidden talent.'''
+        Label(ch1,text=clubinfo).pack()
+    elif(choice2=="Choice 5"):
+        Label(ch1,text="ISAAC CLUB",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        clubinfo ='''The Photography Club is a platform built for photography Beginners, Amateurs, Enthusiasts and Hobbyists, 
+on an idea to connect every photography enthusiast by a common thread. 
+We are growing on a single set of mind where everyone is welcome to join us, 
+and stimulate the inception of new ideas in this visual art. We are here in order to 
+inculcate and motivate the art of photography in our students.We are a place where people 
+are not judged by their skills, rather they have to come up with enthusiasm, and rest we help them 
+in providing the right expertise. We are there to give the support to one other and learn from 
+the unlearned skills from our team as well as build on each other's artistry. We seek to display 
+our love of photography through the constructive criticism of our peers, leisure activities, 
+and the promotion of photography throughout the campus and carve a niche for ourselves as a 
+club on different platforms.We are an inclusive club, where we also promote creative videography. 
+We welcome all sorts of individuals to come and join us over our monthly sessions, 
+discuss their aspirations and creativity, find the like minded people and transform them through various club activities.'''
+        Label(ch1,text=clubinfo).pack()
+    elif(choice2=="Choice 6"):
+        Label(ch1,text="SPIC MACAY CLUB",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        clubinfo ='''This is the society for the promotion of Indian classical music and culture amongst youth. 
+The university through this club organizes various cultural events to keep the students rooted to Indian culture and traditions.'''
+        Label(ch1,text=clubinfo).pack()
+    elif(choice2=="Choice 7"):
+        Label(ch1,text="ALEXIS CLUB",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        clubinfo ='''Alexis is not merely a club but an outlet and a platform for the students who want to work 
+for the society and leave a mark. The club conducts activities to protect the nature and also provide students 
+with opportunities to work for the welfare of the society. Alexis is involved in various initiatives like teaching 
+the underprivileged, organizing visits to places like old age homes, an orphanage, yoga, meditation, tree plantation, etc.'''
+        Label(ch1,text=clubinfo).pack()
+    elif(choice2=="Choice 8"):
+        Label(ch1,text="BU PULSE CLUB",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        clubinfo ='''The basic idea behind this club is to promote healthy adventure activities like river rafting, 
+trekking and camping. The club aims at familiarizing the students with the beauty and the thrill that’s 
+hidden in nature. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took 
+a galley of type and scrambled it to make a type specimen book. 
+It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'''
+        Label(ch1,text=clubinfo).pack()
+    elif(choice2=="Choice 9"):
+        Label(ch1,text="ASTRONOMY CLUB",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        clubinfo ='''Astronomy Club as the name suggests is a group of travel enthusiats and adventure sports lovers. 
+The club aims to make students experience the beauty and the thrill that’s hidden in nature. 
+The members participates in adventure activities like river rafting, trekking and camping.'''
+        Label(ch1,text=clubinfo).pack()
+    elif(choice2=="Choice 10"):
+        Label(ch1,text="SPARK CLUB",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        clubinfo ='''SPARK is a student Club which closely works with the Centre for Innovation and Entrepreneurship (CIE) 
+and the Bennett Hatchery to nurture creativity and an entrepreneurial bent of mind amongst students. 
+Our objectives include: encouraging creative thinking, supporting future start upfounders, 
+and facilitating interaction with entrepreneurs, industry expertsand venture capitalists.'''
+        Label(ch1,text=clubinfo).pack()
+    elif(choice2=="Choice 11"):
+        Label(ch1,text="CEREBRUM CLUB",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        clubinfo ='''Cerebrum Club as the name suggests is a group of travel enthusiats and adventure sports lovers. 
+        The club aims to make students experience the beauty and the thrill that’s hidden in nature. 
+        The members participates in adventure activities like river rafting, trekking and camping.'''
+        Label(ch1,text=clubinfo).pack()
+def courserl(): #COURSE RELATED ISSUE
+    ch.withdraw()
+    global ch5
+    ch5 = Tk()
+    ch5.geometry("600x600")
+    ch5.title("BECA")
+    text2='''1. PERSONAL DOUBT
+2. STUDY MATERIAL
+3. BACK'''
+    Label(ch5,text="Course related issues.",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+    Label(ch5,text=text2).pack()
+    var=StringVar(ch5)
+    var.set(None)
+    Radiobutton(ch5,text="1", value='Ask doubt here', variable=var).pack()
+    Radiobutton(ch5,text="2", value='Study material here', variable=var).pack()
+    Radiobutton(ch5,text="3", value='Back', variable=var).pack()
+    Button(ch5, text='Submit',command=lambda: courserl1(var.get())).pack()
+def courserl1(choice):
+    Label(ch5,text=choice).pack()
+
+def erprli(choice): #ERP related issues function1 
+    ch.withdraw()
+    ch1 = Tk()
+    ch1 = Tk()
+    ch1.geometry('600x600')
+    ch1.title("BECA")
+    if choice=='Choice 1':
+        Label(ch1,text ='Timetable',bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        Label(ch1,text = "Yours timetable").pack()
+    elif choice=='Choice 2':
+        Label(ch1,text = 'Results',bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        txt2 = '''1. RESULT NOT SHOWING
+2. DISCREPANCIES IN RESULTS
+3. OTHER ISSUES 
+4. BACK'''
+        Label(ch1, text=txt2).pack()
+        Label(ch1, text="Enter choice").pack()
+        var=StringVar(ch)
+        var.set(None)
+        Radiobutton(ch1,text="1", value='Yours result:', variable=var).pack()
+        Radiobutton(ch1,text="2", value='Contact respective teacher', variable=var).pack()
+        Radiobutton(ch1,text="3", value='Other issues will be added soon', variable=var).pack()
+        Radiobutton(ch1,text="Back", value='Back', variable=var).pack()
+        Button(ch1, text='Submit',command=lambda: erprli1(var.get())).pack()
+    else:
+        Label(ch1,text="Under construction").pack()
+def erprli1(choice): #ERP related issues function2
+    Label(ch1,text=choice).pack()
+
+def eri(var): #Examinations related issue fun1
+    ch.withdraw()
+    global ch5
+    ch5 = Tk()
+    ch5.geometry("600x600")
+    ch5.title("BECA")
+    txt2='''1. REVIEWING ERROR
+2. WRONG SOLUTIONS
+3. QUERIES
+4. BACK'''
+    if var=="1":
+        Label(ch5,text="Mathematics",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        Label(ch5,text =txt2).pack()
+        Label(ch5, text="Enter choice").pack()
+        var=StringVar(ch5)
+        var.set(None)
+        Radiobutton(ch5,text="1", value='Review your errors', variable=var).pack()
+        Radiobutton(ch5,text="2", value='Wrong solutions', variable=var).pack()
+        Radiobutton(ch5,text="3", value='Ask Queries', variable=var).pack()
+        Radiobutton(ch5,text="Back", value='Back', variable=var).pack()
+        Button(ch5, text='Submit',command=lambda: eri1(var.get())).pack()
+    elif var=="2":
+        Label(ch5,text="Life skills",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        Label(ch5,text =txt2).pack()
+        Label(ch5, text="Enter choice").pack()
+        var=StringVar(ch5)
+        var.set(None)
+        Radiobutton(ch5,text="1", value='Review your errors', variable=var).pack()
+        Radiobutton(ch5,text="2", value='Wrong solutions', variable=var).pack()
+        Radiobutton(ch5,text="3", value='Ask Queries', variable=var).pack()
+        Radiobutton(ch5,text="Back", value='Back', variable=var).pack()
+        Button(ch5, text='Submit',command=lambda: eri1(var.get())).pack()
+    elif var=="4":
+        Label(ch5,text="Physics",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        Label(ch5,text =txt2).pack()
+        Label(ch5, text="Enter choice").pack()
+        var=StringVar(ch5)
+        var.set(None)
+        Radiobutton(ch5,text="1", value='Review your errors', variable=var).pack()
+        Radiobutton(ch5,text="2", value='Wrong solutions', variable=var).pack()
+        Radiobutton(ch5,text="3", value='Ask Queries', variable=var).pack()
+        Radiobutton(ch5,text="Back", value='Back', variable=var).pack()
+        Button(ch5, text='Submit',command=lambda: eri1(var.get())).pack()
+    elif var=="5":
+        Label(ch5,text="Electrical",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        Label(ch5,text =txt2).pack()
+        Label(ch5, text="Enter choice").pack()
+        var=StringVar(ch5)
+        var.set(None)
+        Radiobutton(ch5,text="1", value='Review your errors', variable=var).pack()
+        Radiobutton(ch5,text="2", value='Wrong solutions', variable=var).pack()
+        Radiobutton(ch5,text="3", value='Ask Queries', variable=var).pack()
+        Radiobutton(ch5,text="Back", value='Back', variable=var).pack()
+        Button(ch5, text='Submit',command=lambda: eri1(var.get())).pack()
+    elif var=="6":
+        Label(ch5,text="Back",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        
+    elif var=="3":
+        txt1='''1. SEB CONFIGURATION COMPLICATIONS
+2. SITE MALFUNCTION
+3. EVALUATION
+4. BACK'''
+        Label(ch5,text="Computer Science",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        Label(ch5,text =txt1).pack()
+        Label(ch5, text="Enter choice").pack()
+        var=StringVar(ch5)
+        var.set(None)
+        Radiobutton(ch5,text="1", value='SEB configuration complications', variable=var).pack()
+        Radiobutton(ch5,text="2", value='Site malfunction', variable=var).pack()
+        Radiobutton(ch5,text="3", value='Evaluation', variable=var).pack()
+        Radiobutton(ch5,text="Back", value='Back', variable=var).pack()
+        Button(ch5, text='Submit',command=lambda: eri1(var.get())).pack()
+
+def eri1(var): #Examinations related issue fun1
+    Label(ch5,text = var).pack()
+
+def misc(var):
+    ch.withdraw()
+    global ch1
+    ch1 = Tk()
+    ch1.geometry('600x600')
+    ch1.title("BECA")
+    if var=="1":
+        txt='''1. NOT ENROLLED IN ANY COURSES
+2. GRADES NOT AVAILABLE
+3. CAN'T ACCESS RELATED ISSUES
+4. NOT ABLE TO ACCESS LMS
+5. BACK'''
+        var=StringVar(ch1)
+        var.set(None)
+        Label(ch1,text="LMS",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        Label(ch1,text=txt).pack()
+        Label(ch1, text="Enter choice").pack()
+        Radiobutton(ch1,text="1", value='NOT ENROLLED IN ANY COURSES', variable=var).pack()
+        Radiobutton(ch1,text="2", value='GRADES NOT AVAILABLE', variable=var).pack()
+        Radiobutton(ch1,text="3", value="CAN'T ACCESS RELATED ISSUES", variable=var).pack()
+        Radiobutton(ch1,text="4", value='4', variable=var).pack()
+        Radiobutton(ch1,text="Back", value='5', variable=var).pack()
+        Button(ch1, text='Submit',command=lambda: misc1(var.get())).pack()
+    if var=="2":
+        txt='''1. NOT ABLE TO LOGIN
+2. TEST CASES RELATED ISSUES
+3. NOT ABLE TO EXECUTE CODES
+4. BACK'''
+        var=StringVar(ch1)
+        var.set(None)
+        Label(ch1,text="CODEZINGER",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        Label(ch1,text=txt).pack()
+        Label(ch1, text="Enter choice").pack()
+        Radiobutton(ch1,text="1", value='NOT ABLE TO LOGIN', variable=var).pack()
+        Radiobutton(ch1,text="2", value='TEST CASES RELATED ISSUES', variable=var).pack()
+        Radiobutton(ch1,text="3", value='NOT ABLE TO EXECUTE CODES', variable=var).pack()
+        Radiobutton(ch1,text="Back", value='Back', variable=var).pack()
+        Button(ch1, text='Submit',command=lambda: misc1(var.get())).pack()
+    if var=="3":
+        txt='''1. SIMULATION PROBLEM
+2. CIRCUIT NOT WORKING
+3. ERRPR IN CONNECTIONS
+4. BACK'''
+        var=StringVar(ch1)
+        var.set(None)
+        Label(ch1,text="Tinkercad",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        Label(ch1,text=txt).pack()
+        Label(ch1, text="Enter choice").pack()
+        Radiobutton(ch1,text="1", value='SIMULATION PROBLEM', variable=var).pack()
+        Radiobutton(ch1,text="2", value='CIRCUIT NOT WORKING', variable=var).pack()
+        Radiobutton(ch1,text="3", value='ERROR IN CONNECTIONS', variable=var).pack()
+        Radiobutton(ch1,text="Back", value='BACK', variable=var).pack()
+        Button(ch1, text='Submit',command=lambda: misc1(var.get())).pack()
+    if var=="4":
+        txt='''1. RESULTS NOT SHOWING
+2. DISCREPANCIES IN VALUES
+3. BACK'''
+        var=StringVar(ch1)
+        var.set(None)
+        Label(ch1,text="AMRITA VIRTUAL LAB",bg="black",fg="red",font=("Agency FB",20,"bold"),pady=10,padx=10).pack()
+        Label(ch1,text=txt).pack()
+        Label(ch1, text="Enter choice").pack()
+        Radiobutton(ch1,text="1", value='RESULTS NOT SHOWING', variable=var).pack()
+        Radiobutton(ch1,text="2", value='DISCREPANCIES IN VALUES', variable=var).pack()
+        Radiobutton(ch1,text="Back", value='Back', variable=var).pack()
+        Button(ch1, text='Submit',command=lambda: misc1(var.get())).pack()
+    
+def misc1(var):
+    Label(ch1,text=var).pack()
+
+
+
+root = Tk() #initialize the blank window
+root.geometry('600x400')
+root.minsize(600,600)
+root.title("BECA")
+choice = IntVar()
+f1 = Frame(root,bg="blue",borderwidth=5,padx=10,pady=10)
+f1.grid()
+l1 = Label(f1,text="Hey! This is BECA. I'm here to help you in any way possible.",bg="Red",font=("Agency FB",20,"bold"),padx=10,pady=10).grid()
+b = Button(root,text="Start here",command=fwindow,padx=10,pady=10).grid(row=5)
+#l2 = Label(f2,text="About",bg="white",font=("Agency FB",20,"bold"),relief=SUNKEN,pady=80,padx=80).grid()
+root.mainloop() #holds view in place (if this is not included,window will open and close very fast)
