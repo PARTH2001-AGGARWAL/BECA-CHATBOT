@@ -1,0 +1,276 @@
+def thanks():
+    print (''' THANKYOU  for your query . 
+    I will always be of assistance to you
+    with best of wishes''')
+    print('''
+===========================================
+||     _____   _____  _____    __        ||
+||    |     \ |      |       /    \      ||
+||    | ___ / |_____ |      | ____ |     ||
+||    |     \ |      |      |      |     ||
+||    |_____/ |_____ |_____ |      |     ||
+||                                       ||
+===========================================
+''')
+        
+def course_related_issues(a1):
+    subjects()
+    print(" enter the syntx number of the options")
+    i5= input()
+    if i5== '1':
+        
+        print("for", a1, "you can contact proxyhod@gmail.com")
+        return('n')
+    elif i5 == '2':
+        print("the study materials for",a1,"is available in LMS" )
+        print('Would you like to have the link ? (Y/N)') 
+        l1=input()
+        return(l1)
+    else:
+        return('n')
+            
+def subjects():
+    print('''1. PERSONAL DOUBT
+    2. STUDY MATERIAL
+    3. BACK''')
+
+ 
+
+def class_related_issues():
+    print('''1. CLASS LINK ISSUES
+2. RECORDED LECTURES
+3. MS TEAMS RELATD ISSUES
+4. BACK''')
+def club_enrollment(choice):
+    print( 'Would you like to join the club ? Y/N')
+    a = input()
+    if a == 'Y' or a =='y' :
+        if choice ==1:
+            print('''click below link
+            https://th.bing.com/th/id/Rd8f88181e82c7db240f45b9e5eb4dc46?rik=Y3LMPmq927M%2fdQ&riu=http%3a%2f%2fwww.thelandofsnows.com%2fwp-content%2fuploads%2f2012%2f02%2fCSC_0142.jpg&ehk=SUfzS5I2KVBN%2bh4aCfwv4S6ltn%2bobUUcaLtMHXPAB2Y%3d&risl=&pid=ImgRaw''')
+        elif choice ==2:
+            print(''' click below link 
+            https://images.techhive.com/images/article/2016/01/thinkstockphotos-511283035-100638943-large.jpg''')
+        elif choice ==3:
+            print('''click below link 
+            https://th.bing.com/th/id/Rb10df16de1da1e9ce8987cdc9be7771e?rik=ZwcLcJa%2b5mmZVg&riu=http%3a%2f%2fclipartmag.com%2fimages%2fdancer-clipart-silhouette-32.jpg&ehk=uQsuRTvp1LGjLy%2bYtFlYmpm91Ydil24DdJ4DCcw1w3k%3d&risl=&pid=ImgRaw''')
+        elif choice ==4:
+            print(''' click below link 
+            https://th.bing.com/th/id/R17b8250972fc84ddce9faf98f26ea300?rik=YBfbQY7gmV3euA&riu=http%3a%2f%2fwww.roninrome.com%2fwp-content%2fuploads%2f2012%2f09%2fVirtuoso-Logo-2-with-box.jpg&ehk=dLe19jHYmB7jMYC4P9XidX%2fZXQR38Ty3FC%2fQ33DEMCg%3d&risl=&pid=ImgRaw''')
+        elif choice ==5:
+            print(''' click below link 
+            https://www.bing.com/images/search?view=detailV2&ccid=4ZEivayw&id=93FD50EC9BD676098982DFC7DBF89DDECCD9DF2C&thid=OIP.4ZEivaywM8fPdy4_FHa5twHaEo&mediaurl=https%3a%2f%2fwallpapercave.com%2fwp%2fwp1836725.jpg&exph=800&expw=1280&q=Aesthetic+Photography&simid=607994295538617121&ck=71792066D2ABEF8E1558F761B70E558E&selectedIndex=2&FORM=IRPRST''')
+        elif choice ==6:
+            print('''click below link 
+            https://th.bing.com/th/id/OIP.EuHH5TWVuROuZSBkAOFbnQHaE7?pid=ImgDet&rs=1''')
+        elif choice ==7:
+            print('''click below link 
+            https://thumbs.dreamstime.com/t/healthy-nature-life-logo-leafs-health-spa-vector-symbol-96644216.jpg''')
+        elif choice ==8:
+            print(''' click below link 
+            https://th.bing.com/th/id/OIP.E4EscY0rwVElbQpSr-vk0gHaKX?pid=ImgDet&rs=1''')
+        elif choice ==9:
+            print(''' click below link 
+            https://th.bing.com/th/id/OIP.qNV2Ripwxvu-BHlugKZLdwHaE4?pid=ImgDet&rs=1''')
+        elif choice ==10:
+            print('''click below link 
+            https://th.bing.com/th/id/Ra7b547f50c1a6dca842a8b2a7eb65637?rik=Zj%2b29rznoZxK1g&riu=http%3a%2f%2fsuccessness.com%2fwp-content%2fuploads%2f2015%2f05%2fEntrepreneurship-image.jpg&ehk=172dFuuFeGosbwniNuh9Fhddw6u3E7RXNlYBnFFUV%2b8%3d&risl=&pid=ImgRaw''')
+        elif choice ==11:
+            print('''click below link 
+            https://th.bing.com/th/id/OIP.3s2oMaz2TloRCyGL3QfA-gHaEo?w=290&h=181&c=7&o=5&pid=1.7''')
+    else :
+        print ("Joining clubs that suit your personality can help you be productive and build your character")
+        print (" Feel free to comeback for more queries")
+        thanks()
+
+def club_related_issues():
+    print('''  1. NOMADS
+    2. ROBOTICS
+    3. SILHOUETTE
+    4. VIRTUOSO
+    5. ISAAC
+    6. SPIC MACAY
+    7. ALEXIS
+    8. BU PULSE
+    9. ASTRONOMY
+    10. SPARK
+    11. CEREBRUM
+    12. BACK''')
+    print("enter the index number to the club of your choice")
+    a13=eval(input())
+    if a13==1:
+        print("Nomads club as the name suggests is a group of travel enthusiats and adventure sports lovers. The club aims to make students experience the beauty and the thrill that’s hidden in nature. The members participates in adventure activities like river rafting, trekking and camping.")
+    elif a13==2:
+        print("The club helps the students to form a brief understanding of various concepts and dynamics of Robotics. Students of the Robotics Club attend workshops, hold competitions and take part in different events to strengthen their technical skills.")
+    elif a13==3:
+        print("Silhouette club is the creative society of the university, which aims to promote the rich and vibrant art by organizing activities like painting, sketching, calligraphy, decoration, craft work, graffiti and contemporary designing. The club hosts various exhibitions, workshops and competitions. It also organizes trips to art museums and encourages students to participate in college fests.")
+    elif a13==4:
+        print("This club is the spice of the University with its fathomless zest and exuberance towards dance, drama and music. The club sponsors the deserving students in big events and organizes activities to unearth the hidden talent.")
+    elif a13==5:
+        print("The Photography Club is a platform built for photography Beginners, Amateurs, Enthusiasts and Hobbyists, on an idea to connect every photography enthusiast by a common thread. We are growing on a single set of mind where everyone is welcome to join us, and stimulate the inception of new ideas in this visual art. We are here in order to inculcate and motivate the art of photography in our students.We are a place where people are not judged by their skills, rather they have to come up with enthusiasm, and rest we help them in providing the right expertise. We are there to give the support to one other and learn from the unlearned skills from our team as well as build on each other's artistry. We seek to display our love of photography through the constructive criticism of our peers, leisure activities, and the promotion of photography throughout the campus and carve a niche for ourselves as a club on different platforms.We are an inclusive club, where we also promote creative videography. We welcome all sorts of individuals to come and join us over our monthly sessions, discuss their aspirations and creativity, find the like minded people and transform them through various club activities.")
+    elif a13==6:
+        print("This is the society for the promotion of Indian classical music and culture amongst youth. The university through this club organizes various cultural events to keep the students rooted to Indian culture and traditions.")
+    elif a13==7:
+        print("Alexis is not merely a club but an outlet and a platform for the students who want to work for the society and leave a mark. The club conducts activities to protect the nature and also provide students with opportunities to work for the welfare of the society. Alexis is involved in various initiatives like teaching the underprivileged, organizing visits to places like old age homes, an orphanage, yoga, meditation, tree plantation, etc.")
+    elif a13==8:
+        print("The basic idea behind this club is to promote healthy adventure activities like river rafting, trekking and camping. The club aims at familiarizing the students with the beauty and the thrill that’s hidden in nature. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.")
+    elif a13==9:
+        print("The club strives to quench a student’s thirst for astronomy by organizing various exciting events such as Star Party (a fun-filled night of star-gazing), Planetarium visits, Quiztronomy (a quiz to test people’s knowledge on everything seen beyond the night sky), Telescope building and handling sessions (telescope – every astronomers weapon), and many more. Public outreach sessions for underprivileged children, school children to introduce them to basics of Astronomy are also conducted.")
+    elif a13==10:
+        print("SPARK is a student Club which closely works with the Centre for Innovation and Entrepreneurship (CIE) and the Bennett Hatchery to nurture creativity and an entrepreneurial bent of mind amongst students. Our objectives include: encouraging creative thinking, supporting future start upfounders, and facilitating interaction with entrepreneurs, industry expertsand venture capitalists.")
+    elif a13==11:
+        print("Cerebrum Club as the name suggests is a group of travel enthusiats and adventure sports lovers. The club aims to make students experience the beauty and the thrill that’s hidden in nature. The members participates in adventure activities like river rafting, trekking and camping.")
+    elif a13==12:
+        print("BACK")
+    club_enrollment(a13)
+    thanks()
+    
+print(" enter your query here ")
+thatline = input()
+
+thatword=thatline.split()
+#count1 = count(that line)
+
+counted = len(thatline.split())
+#print(counted)
+for i in range (0, counted):
+    #print(thatword[i])
+    if thatword[i]=='class'    and   thatword[i] != 'not' :
+        #class_related_issues()
+        print('ok')
+        print(" enter your query here ")
+        thatline1 = input()
+        thatword1=thatline1.split()
+        #count1 = count(that line)
+        counted1 = len(thatline1.split())
+        #print(counted1)
+        for i1 in range (0, counted1):
+            if thatword1[i1] =='working' or thatword1[i1]=='invalid' :
+                print("oh we are sorry to hear that ")
+                print(''' LET'S FIX THIS  
+                WHICH SUBJECT LINKS DO YOU FIND FAULTY ?''')
+                
+                thatline3 = input()
+                thatword3=thatline3.split()
+                #count1 = count(that line)
+                counted3 = len(thatline3.split())
+                #print(counted3)
+                for i3 in thatline3.split():
+                    if i3 =='physics' or i3 =='Physics': 
+                        print ('the following is the link to physics class') 
+                        print('https://www.furman.edu/academics/physics/wp-content/uploads/sites/103/2019/10/physics-1.jpg')
+                    elif i3 =='electrical' or i3 =='Electrical' or i3 == 'ece' :
+                        print (' the following is the link to the ECE class')
+                        print('https://th.bing.com/th/id/OIP.Z9OekuDV1lS-Aaq6MV8AwAHaDt?pid=ImgDet&rs=1')
+                        
+                    elif  i3  =='maths' or i3 == 'mathematics' or i3 == 'math' :
+                        print(' the following is the link to the EMAT session ')
+                        print('https://th.bing.com/th/id/OIP.Ge4_uuCqT7QNS3iSIRAGtgHaHa?pid=ImgDet&rs=1 ')
+                    elif  i3 == 'ehss' or i3 =='EHSS' :
+                        print(' the following is the link to the EHSS session')
+                        print(' https://th.bing.com/th/id/OIP.xOlAD8MOkXcIUQ_ENNV7YAHaEl?pid=ImgDet&rs=1')
+                    elif i3  == 'python' or  i3 == 'CSE' or i3 == 'cse' :
+                        print('the following is the link to the computational thinking and programming  session')
+                        print('https://files.realpython.com/media/pythonlogo.0658b34b4498.jpg ')
+                    elif i3 =='all' or i3 =='All' :
+                        print('''physics - > https://www.furman.edu/academics/physics/wp-content/uploads/sites/103/2019/10/physics-1.jpg
+                        electronics - > https://th.bing.com/th/id/OIP.Z9OekuDV1lS-Aaq6MV8AwAHaDt?pid=ImgDet&rs=1
+                        mathematics - > https://th.bing.com/th/id/OIP.Ge4_uuCqT7QNS3iSIRAGtgHaHa?pid=ImgDet&rs=1
+                        EHSS - >  https://th.bing.com/th/id/OIP.xOlAD8MOkXcIUQ_ENNV7YAHaEl?pid=ImgDet&rs=1
+                        PYTHON - >  https://files.realpython.com/media/pythonlogo.0658b34b4498.jpg ''')
+                        
+            elif thatword1[i1]=='not' and thatword1[i1+1] =='getting':
+                #print("not getting links")
+                print('Which subject link is inaccesible ?')
+                thatline2 = input()
+                thatword2=thatline2.split()
+                #count1 = count(that line)
+                #counted2 = len(thatline2.split())
+                #print(counted2)
+                for i2 in thatline2.split() :
+                    if i2 =='physics' or  i2 =='Physics':
+                        print (' the following is the link to physics class') 
+                        print('ttps://www.furman.edu/academics/physics/wp-content/uploads/sites/103/2019/10/physics-1.jpg')
+                    elif i2 =='electrical' or i2 =='Electrical':
+                        print (' the following is the link to the ECE class')
+                        print('https://th.bing.com/th/id/OIP.Z9OekuDV1lS-Aaq6MV8AwAHaDt?pid=ImgDet&rs=1')
+                        
+                    elif  i2  =='maths' or i2 == 'mathematics' or i2 == 'math'  :
+                        print(' the following is the link to the EMAT session ')
+                        print('https://th.bing.com/th/id/OIP.Ge4_uuCqT7QNS3iSIRAGtgHaHa?pid=ImgDet&rs=1 ')
+                    elif i2== 'ehss' or  i2 =='EHSS' :
+                        print(' the following is the link to the EHSS session')
+                        print(' https://th.bing.com/th/id/OIP.xOlAD8MOkXcIUQ_ENNV7YAHaEl?pid=ImgDet&rs=1')
+                    elif i2 == 'python' or  i2 == 'CSE':
+                        print('the following is the link to the computational thinking and programming  session')
+                        print('https://files.realpython.com/media/pythonlogo.0658b34b4498.jpg ')
+                
+            elif thatword1[i1]=='classes' and thatword1[i1+1] == 'not' and thatword1[i1+2]== 'scheduled':
+                print("not scheduled")
+        
+    elif thatword[i]=='club'   and   thatword[i] != 'not' :
+        print(''' Bennett provides a variety of clubs to chose from 
+        ''')
+        club_related_issues()
+        
+    elif thatword[i]=='course' and   thatword[i] != 'not' :
+        print(" on which subject are you facing these issues ?")
+        thatline4= input()
+    #thatword4=thatline4.split()
+        counted4 = len(thatline4.split())
+        for i4 in thatline4.split():
+            if i4 =='CSE' or i4 =='cse':
+                a= 'cse'
+                a1= course_related_issues(a)
+                if a1 == 'y' or a1=='Y' :
+                    print('''this is the link  - >
+                    https://cdn.slidesharecdn.com/ss_thumbnails/pythonnotes-151202071035-lva1-app6892-thumbnail-4.jpg?cb=1449040324''')
+                    thanks()
+                else :
+                    print(" ok ")
+                    thanks()
+            elif i4 =='ece' or 'ECE' or 'ele' :
+                a = 'ece'
+                a1= course_related_issues(a)
+                if a1 == 'y' or a1=='Y' :
+                    print('''click on the below link - >
+                    https://th.bing.com/th/id/OIP.Fj79uIOAoaTBHHRcWK8PEwAAAA?w=182&h=257&c=7&o=5&pid=1.7''')
+                    thanks()
+                else :
+                    print(" ok ")
+                    thanks() 
+            elif i4 ==['maths','math','mathematics'] :
+                a = 'mathematics'
+                a1 = course_related_issues(a)
+                if a1 == 'y' or a1=='Y' :
+                    print('''click on the below link ->
+                    https://pm1.narvii.com/6735/6a1c255003b67f4e524c79e957db2e4e9531112ev2_hq.jpg''')
+                    thanks()
+                else :
+                    print(" ok ")
+                    thanks()
+            elif i4 ==['physics', 'Physics']:
+                a='physics'
+                a1 = course_related_issues(a)
+                if a1 == 'y' or a1=='Y' :
+                    print('''click on the link below 
+                    https://i.pinimg.com/originals/4a/4a/cb/4a4acbd985f7730db7a7325826c44528.jpg''')
+                    thanks()
+                else :
+                    print(" ok ")
+                    thanks()
+            elif i4 ==['EHSS','ehss']:
+                a = 'EHSS'
+                a1 = course_related_issues(a)
+                if a1 == 'y' or a1=='Y' :
+                    print('''click on the link below 
+                    https://kaylablogs.com/wp-content/uploads/2016/09/college-notes-800x490.jpg''')
+                    thanks()
+                else :
+                    print(" ok ")
+                    thanks()
+    elif thatword[i]=='erp'    and   thatword[i] != 'not' :
+       print("lol")
+        
+        
+        
